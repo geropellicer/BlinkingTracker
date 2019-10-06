@@ -25,8 +25,8 @@ args = vars(ap.parse_args())
 # list of tracked points
 # colorLower = (49, 100, 100)
 # colorUpper = (99, 255, 255)
-colorLower = (0, 240, 0)
-colorUpper = (255, 255, 50)
+colorLower = (0, 0, 240)
+colorUpper = (255, 50, 255)
 pts = deque(maxlen=args["buffer"])
 
 gbuffer = deque(maxlen=25)
