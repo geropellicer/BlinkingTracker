@@ -25,8 +25,8 @@ args = vars(ap.parse_args())
 # list of tracked points
 # colorLower = (49, 100, 100)
 # colorUpper = (99, 255, 255)
-colorLower = (120, 100, 100)
-colorUpper = (140, 255, 255)
+colorLower = (0, 240, 0)
+colorUpper = (255, 255, 50)
 pts = deque(maxlen=args["buffer"])
 
 gbuffer = deque(maxlen=25)
@@ -116,9 +116,9 @@ while True:
 
 	if len(gbuffer) >= 6:
 		print(gbuffer)
-		if gbuffer[0] == 1 and gbuffer [1] == 0 and gbuffer [2] == 0 and gbuffer[3] == 1 and gbuffer [4] == 0 and gbuffer [5] == 0:
+		if gbuffer[-6] == 1 and gbuffer [-5] == 0 and gbuffer [-4] == 0 and gbuffer[-3] == 1 and gbuffer [-2] == 0 and gbuffer [-1] == 0:
 			print("ALELUYA")
-		if gbuffer[0] == 1 and gbuffer [1] == 1 and gbuffer [2] == 0 and gbuffer[3] == 1 and gbuffer [4] == 1 and gbuffer [5] == 0:
+		if gbuffer[-6] == 1 and gbuffer [-5] == 1 and gbuffer [-4] == 0 and gbuffer[-3] == 1 and gbuffer [-2] == 1 and gbuffer [-1] == 0:
 			print("GERONIMO") 
 		if len(gbuffer) >= 20:
 			gbuffer.popleft()
